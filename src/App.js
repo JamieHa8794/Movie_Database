@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 
 import {load, loadMovies} from './store'
 import Movies from './Movies'
+import Welcome from './Welcome'
+import Nav from './Nav'
 
 class _App extends Component{
     constructor(){
@@ -16,7 +18,8 @@ class _App extends Component{
         const {movies} = this.props
         return(
             <div>
-                <h1>Movie Database</h1>
+                <Nav/>
+                <Welcome/>
                 <Movies/>
             </div>
         )

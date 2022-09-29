@@ -5,11 +5,17 @@ import { connect } from 'react-redux';
 const Movies = ({movies}) =>{
     return(
         <div>
-            <ul>
+            <ul className='movies-ul'>
                 {movies.map((movie,idx) =>{
                     return(
-                        <li key={idx}>
+                        <li key={idx} className='movies-movieBox'>
+                            <img src={movie.posterIMG} className='movies-img'/>
+                            <div className='movies-title'>
                             {movie.title}
+                            </div>
+                            <div>
+                                {movie.relasedYear}
+                            </div>
                         </li>
                     )
                 })}
@@ -17,6 +23,7 @@ const Movies = ({movies}) =>{
         </div>
     )
 }
+
 
 
 const mapStateToProps = ({movies}) =>{

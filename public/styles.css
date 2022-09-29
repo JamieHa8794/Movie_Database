@@ -1,3 +1,56 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: #091D34;
+    color: #609CE1;
+    padding: 10px;
+}
+
+.nav-h2{
+    padding-left: 10px;
+    padding-right: 50px;
+    margin: 0px;
+}
+
+
+.welcome-box{
+    background-color: #236AB9;
+
+    margin: 30px;
+}
+
+.welcome-welcome{
+    color: #E1ECF9;
+    font-size: 60px;
+}
+.welcome-blurb{
+    color:#091D34;
+    font-size: 25px;
+}
+
+
 body{
-    background-color: lightsteelblue;
+    background-color: #E1ECF9;
+    margin: 0;
+}
+.movies-movieBox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: 120px;
+}
+.movies-ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.movies-img{
+    border-radius: 10%;
+    height: 160px;
+    width: 120px;
+    margin-bottom: 10px;
 }
