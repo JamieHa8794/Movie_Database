@@ -8,11 +8,50 @@ nav{
     padding: 10px;
 }
 
-.nav-h2{
+.nav-title{
     padding-left: 10px;
     padding-right: 50px;
     margin: 0px;
+
+    font-family: cursive;
+    font-size: 25px;
 }
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-links > a{
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* unvisited link */
+.nav-links > a:link {
+    color: #609CE1;
+  }
+  
+  /* visited link */
+  .nav-links > a:visited {
+    color: #133863;
+  }
+  
+  /* mouse over link */
+  .nav-links >  a:hover {
+    color: #E1ECF9;
+  }
+  
+  /* selected link */
+  .nav-links >  a:active {
+    color: white;
+  }
+
+
+
+
 
 
 .welcome-box{
@@ -24,6 +63,7 @@ nav{
 .welcome-welcome{
     color: #E1ECF9;
     font-size: 60px;
+
 }
 .welcome-blurb{
     color:#091D34;
@@ -46,11 +86,25 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
+    padding: 30px;
 }
 .movies-img{
     border-radius: 10%;
-    height: 160px;
+    height: 170px;
     width: 120px;
     margin-bottom: 10px;
+}
+
+
+.footer-box{
+    background-color: #091D34;
+    
+    padding: 30px
+}
+
+.footer-title{
+    color:#609CE1;
+    font-size: 25px;
 }

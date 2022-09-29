@@ -6,6 +6,7 @@ import {load, loadMovies} from './store'
 import Movies from './Movies'
 import Welcome from './Welcome'
 import Nav from './Nav'
+import Footer from './Footer'
 
 class _App extends Component{
     constructor(){
@@ -21,6 +22,7 @@ class _App extends Component{
                 <Nav/>
                 <Welcome/>
                 <Movies/>
+                <Footer/>
             </div>
         )
     }
