@@ -3,23 +3,21 @@ import axios from 'axios'
 import { connect } from 'react-redux'
 
 import {load, loadMovies} from './store'
+import Movies from './Movies'
 
-class App extends Component{
+class _App extends Component{
     constructor(){
         super();
-        this.state = {
-           movies : [] 
-        }
     }
     async componentDidMount(){
-        const movies = (await(axios.get('/api/movies'))).data;
-        this.setState({movies : movies})
+        this.props.load()
     }
     render(){
+        const {movies} = this.props
         return(
             <div>
                 <h1>Movie Database</h1>
-                <Movies movies={movies}/>
+                <Movies/>
             </div>
         )
     }
@@ -30,9 +28,18 @@ const mapStateToProps = (state) =>{
     return state;
 }
 const mpaDispatchToProps = (dispatch) =>{
+    return{
+        load: async ()=>{
+            const movies = (await(axios.get('/api/movies'))).data;
+            dispatch(load());
+            dispatch(loadMovies(movies))
+        }
+    }
 
 }
 
 
+const App = connect(mapStateToProps, mpaDispatchToProps)(_App)
 
-export default connect(mapStateToProps, mpaDispatchToProps)(App)
+
+export default App

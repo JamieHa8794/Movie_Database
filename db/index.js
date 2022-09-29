@@ -8,6 +8,9 @@ const Movie = db.define('movie', {
     title: {
         type: STRING
     },
+    posterIMG:{
+        type: STRING
+    },
     relasedYear: {
         type: STRING
     },
@@ -50,7 +53,8 @@ const syncAndSeed = async () =>{
         await db.sync({force: true});
         await Promise.all(data.map(movie => {
             Movie.create({
-            title: movie.Poster_Link,
+            title: movie.Series_Title,
+            posterIMG: movie.Poster_Link,
             relasedYear: movie.Released_Year,
             runTime: movie.Runtime,
             genre: movie.Genre,

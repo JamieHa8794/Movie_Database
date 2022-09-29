@@ -1,16 +1,15 @@
 import React from 'react';
-import { Connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 
-const Movies = () =>{
-    const movies = this.props
+const Movies = ({movies}) =>{
     return(
         <div>
             <ul>
-                {moveis.map((movie,idx) =>{
+                {movies.map((movie,idx) =>{
                     return(
                         <li key={idx}>
-                            {movie.name}
+                            {movie.title}
                         </li>
                     )
                 })}
@@ -20,8 +19,10 @@ const Movies = () =>{
 }
 
 
-const mapStateToProps = (state) =>{
-    return state
+const mapStateToProps = ({movies}) =>{
+    return {
+        movies
+    }
 }
 
 

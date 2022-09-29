@@ -30,7 +30,7 @@ const load = () =>{
         type: LOADED
     }
 }
-const loadMovies = (moies) =>{
+const loadMovies = (movies) =>{
     return{
         type: LOAD_MOVIES,
         movies : movies
