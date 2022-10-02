@@ -50,14 +50,13 @@ nav{
   }
 
 
-
-
-
-
 .welcome-box{
     background-color: #236AB9;
-
+    
+    padding: 25px;
     margin: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .welcome-welcome{
@@ -68,12 +67,14 @@ nav{
 .welcome-blurb{
     color:#091D34;
     font-size: 25px;
+    padding-left: 25px;
 }
 
 
 body{
     background-color: #E1ECF9;
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .movies-movieBox{
     display: flex;
@@ -91,7 +92,8 @@ body{
     padding: 30px;
 }
 .movies-img{
-    border-radius: 10%;
+    border-radius: 15%;
+    opacity: 90%;
     height: 170px;
     width: 120px;
     margin-bottom: 10px;
@@ -99,12 +101,41 @@ body{
 
 
 .footer-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     background-color: #091D34;
     
     padding: 30px
 }
 
-.footer-title{
+.footer-title-box{
+    display: flex;
+    flex-direction: column;
+
+    padding-right: 10px;
+    
+    border-right: whitesmoke solid;
+}
+
+.footer-title1{
     color:#609CE1;
     font-size: 25px;
+    font-family: cursive;
+    font-size: 35px;
+}
+
+.footer-title2{
+    color:#609CE1;
+    font-size: 25px;
+    font-family: cursive;
+    font-size: 35px;
+
+    padding-left: 20px;
+}
+
+.footer-text{
+    padding-left: 100px;
+    color: whitesmoke
 }

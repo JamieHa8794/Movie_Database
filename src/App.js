@@ -12,7 +12,7 @@ class _App extends Component{
     constructor(){
         super();
     }
-    async componentDidMount(){
+    componentDidMount(){
         this.props.load()
     }
     render(){
